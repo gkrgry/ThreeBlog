@@ -5,14 +5,14 @@ h1,h2,h3,h4,h5,h6{font-family:'NotoSansKR', sans-serif}
 *{margin: 0px;padding: 0px;list-style: none;text-decoration: none;color: black;}
 
 /* header */
-.header {height: 150px;text-align: center;box-sizing: border-box;border-bottom: 1px solid #999;}
-.header_top{font: 10px 'arial';float: right;}
-.header_top a{margin-right:10px}
-.header_logo h1{font: bold 50px 'arial';padding-top: 14px;letter-spacing: 2px;}
-.header_logo p {font: bold 12px 'arial';letter-spacing: 2px;margin-top: -1px;}
+.header {height: 200px;text-align: center;box-sizing: border-box;border-bottom: 1px solid #999;}
+.header_top{font: 15px bold;float: right;font-family: 'NotoSansKR';}
+.header_top a{margin-right:30px;margin-left: 25px;color: #999;}
+.header_logo h1{font: bold 60px 'NotoSansKR';padding-top: 40px;letter-spacing: 2px;line-height: 95%;}
+.header_logo p {font: bold 20px 'NotoSansKR';letter-spacing: 2px;margin-top: -1px;}
 .header_gnb ul{margin-top: 40px;float: left;}
 .header_gnb ul li{display: inline-block;}
-.header_gnb ul li a{display: block;font: bold 18px 'arial';margin: 0px 16px;letter-spacing: 1px;transition: 1.5s;padding: 3px 15px 1px 15px;}
+.header_gnb ul li a{display: block;font: bold 20px 'NotoSansKR';margin: 0px 16px;letter-spacing: 1px;transition: 1.5s;padding: 3px 15px 1px 15px;}
 .header_gnb ul li a:hover{background-color: black;color: white;}
 
 /* main */
@@ -39,13 +39,14 @@ h1,h2,h3,h4,h5,h6{font-family:'NotoSansKR', sans-serif}
 .story-tap h3::before{content: '';display: inline-block;width: 110px;height: 2px;background-color: rgb(95, 95, 95);position: absolute;bottom: 57px;}
 
 /* Footer - footer의 width는 1200px을 기준으로 한다 */
-footer{height:220px;background:#eee;padding:50px 0;text-align:left}
+footer{height:150px;background:#eee;text-align:left}
 footer>div{width:1200px;margin:0 auto}
-.footer-cont{position: relative;}
-.footer-logo{position: absolute;display: inline-block;width: 100px;height: 100px;float: left;}
-.footer-logo h2{font: 50px bold 'NotoSansKR', sans-serif;color: #999;}
-.team{position: absolute;width: 100px;height: 100px;float: right;}
-
+.footer-logo{position: absolute;display: inline-block;width: 200px;height: 100px;left: 30px;}
+.footer-logo h2{color: #999;font-size: 50px;margin-top: 40px;}
+.team{position: absolute;width: 200px;height: 150px;display: inline-block;right: 10px;}
+.footer-cont span p:nth-child(1){font: 25px bold;font-family: 'NotoSansKR';font-weight: 900;line-height: 300%;margin-top: 10px;}
+.footer-cont span p:nth-child(2){font: 15px bold;font-family: 'NotoSansKR';}
+.footer-cont span p:nth-child(3){font: 15px bold;font-family: 'NotoSansKR';}
 
 @media only screen and (max-width:1280px) { 
 
