@@ -5,8 +5,16 @@
  ### front - 재혁
 - 경로 - webcontent > Front
 
-## Mainpage
-- header & 
+## MAIN
+- footer 만 만들면 됨
+
+## GALLERY
+
+## STORY
+
+## WRITE
+
+## LOGIN
 
 
 
