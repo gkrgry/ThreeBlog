@@ -42,7 +42,7 @@ input::focus {
 .login .ico .ico-img{width: 40px;height: 40px; padding: 20px;}
 .id, .password{
     width: 100%;
-    height: 90px;
+    height: 112px;
 }
 
 .box{
@@ -66,4 +66,33 @@ input::focus {
     font-size: 13px;
     font-family: 'NotoSansKR';
     position: relative;
+}
+
+.sumit{
+    width: 100%;
+    height: 110px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 30px;
+    padding: 20px 0;
+    cursor: pointer;
+    background-color: rgb(187, 187, 187);
+    float: left;
+    border: none;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.login-btn span{
+    font: bold 14px 'NotoSansKR';
+    display: block;
+    margin-top: -9px;
+}
+
+.sumit a{
+    font: bold 15px 'NotoSansKR';
+    float: left;
+    margin-top: 20px;
 }

@@ -9,7 +9,7 @@
 - section > markup만 다시 제조정 해주면 됨.
 
 ## GALLERY
-
+MARK UP 만 함
 ## STORY
 
 ## WRITE
@@ -25,3 +25,4 @@
  ### [1106]
  MAIN, LOGIN, SIGN 3 page 이어줌.
  LOGIN, SIGN 확실하게 다 끝냄
+ GALLERY MARK UP 만 함
