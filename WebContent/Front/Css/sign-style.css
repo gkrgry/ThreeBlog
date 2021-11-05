@@ -2,7 +2,7 @@
 /* CSS Document */
 
 h1,h2,h3,h4,h5,h6{font-family:'NotoSansKR', sans-serif}
-*{zoom: 0.95; margin: 0px;padding: 0px;list-style: none;text-decoration: none;color: black;}
+*{margin: 0px;padding: 0px;list-style: none;text-decoration: none;color: black;}
 
 /* header */
 .header {
@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6{font-family:'NotoSansKR', sans-serif}
 
 /* main */
 h2{
-    font: bold 60px 'NotoSansKR';
+    font: bold 45px 'NotoSansKR';
     padding-top: 40px;
     text-align: center;
 }
