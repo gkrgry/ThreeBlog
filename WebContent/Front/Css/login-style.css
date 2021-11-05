@@ -4,34 +4,34 @@
 h1,h2,h3,h4,h5,h6{font-family:'NotoSansKR', sans-serif}
 *{ margin: 0px;padding: 0px;list-style: none;text-decoration: none;color: black;}
 
+
 /* header */
 .header {height: 150px;text-align: center;box-sizing: border-box;}
-.header_top{font: 15px bold;float: right;font-family: 'NotoSansKR';}
+.header_top{font: 13px bold;float: right;font-family: 'NotoSansKR';}
 .header_top a{margin-right:30px;margin-left: 25px;color: #999;}
 .header_logo h1{font: bold 60px 'NotoSansKR';padding-top: 40px;letter-spacing: 2px;line-height: 95%;}
 .header_logo p {font: bold 20px 'NotoSansKR';letter-spacing: 2px;margin-top: -1px;}
 
+
+/* main */
+
 h2{
-    font: bold 60px 'NotoSansKR';padding-top: 40px;text-align: center;
+    font: bold 45px 'NotoSansKR';
+    padding-top: 40px;
+    text-align: center;
+    
 }
 
-input:focus {
+input::focus {
     outline: none;
 }
 
-h3{
-    margin: 19px 0 8px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-
-.content{
+.content {
     position: relative;
     height: 100%;
 }
 
-.sign{
+.login{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -52,31 +52,10 @@ h3{
 .int {
     display: block;
     position: relative;
-    width: 100%;
-    height: 29px;
+    width: 80%;
+    height: 24px;
     border: none;
     background: #fff;
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'NotoSansKR';
 }
-
-input {
-    font-family: 'NotoSansKR';
-}
-
-.sumit{
-    margin: 30px 0 91px;
-}
-
-#btnsign{
-    width: 100%;
-    padding: 21px 0 17px;
-    border: 0;
-    cursor: pointer;
-    background-color: rgb(108, 108, 247);
-
-}
-#btnsign span{ color: white;font-size: 20px;font-weight: 400;font-family: 'NotoSansKR';}
-
-
-
