@@ -1,28 +1,41 @@
 # CSHD project
-> 인원 => cute 재혁 / sexy 태규 / hansome 호준
+    인원 => cute 재혁 / sexy 태규 / hansome 호준
  <hr>
 
  ### front - 재혁
-- 경로 - webcontent > Front
+    경로 - webcontent > Front
 
 ## MAIN
-- section > markup만 다시 제조정 해주면 됨.
+    11.6 section > markup만 다시 제조정 해주면 됨.
 
 ## GALLERY
-MARK UP 만 함
+    11.6 MARK UP 만 함
+    11.7 이미지 부분은 초록색으로 하고 나머지는 다 완료
+         괜찮은지 검사.
+
+
 ## STORY
 
 ## WRITE
 
 ## LOGIN
- THE END
+    11.6 아이콘 그림이 일러스트 없어서 못 만듬
+         다음에 학교 가서 만들고 바꿔 놓기.
 
 ## SIGN
- THE END 
+    11.6 email 주소를 따로 받아야 한다고 함
+         email 뒤에 선택 박스 만들어 주기.
+    11.7 자바스크립트도 넣어줘야함 (경고문구)
+         공부하기....
 
  <hr>
 
  ### [1106]
- MAIN, LOGIN, SIGN 3 page 이어줌.
- LOGIN, SIGN 확실하게 다 끝냄
- GALLERY MARK UP 만 함
+    MAIN, LOGIN, SIGN 3 page 이어줌.
+    LOGIN, SIGN 확실하게 다 끝냄
+    GALLERY MARK UP 만 함
+
+ ### [1107]
+    GALLERY 90% 완료
+    이미지만 넣으면 끝..
+    다른 페이지랑 이어주는 작업은 아직 안함.
