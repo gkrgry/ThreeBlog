@@ -21,10 +21,24 @@
 </head>
 <body>
 	<%
+		
+		String blogId = null;
+		if(session.getAttribute("blogId") != null){//로그인 확인
+			blogId = (String) session.getAttribute("blogId");
+		}
+		if(blogId != null){//이미 로그인 했으면 회원가입 안되게
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('이미 로그인 성공')");
+			script.println("location.href='../main.jsp'");
+			script.println("</script>");
+		}
+	
 		JoinDAO dao = new JoinDAO();
 		int result = dao.join(join);
 		System.out.print(result);
 		if(result == 1){
+			session.setAttribute("blogId", join.getBlogid());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('회원가입 성공')");

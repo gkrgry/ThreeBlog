@@ -16,10 +16,23 @@
 </head>
 <body>
 	<%
+		String blogId = null;
+		if(session.getAttribute("blogId") != null){//로그인 확인
+			blogId = (String) session.getAttribute("blogId");
+		}
+		if(blogId != null){ //이미 로그인 했으면 다시 로그인 할 필요 없게
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('이미 로그인 성공')");
+			script.println("location.href='../main.jsp'");
+			script.println("</script>");
+		}
+		
 		String blogid = request.getParameter("blogid");
 		LoginDAO dao = new LoginDAO();
 		int result = dao.login(login.getBlogid(), login.getBlogpw());
 		if(result == 1){
+			session.setAttribute("blogId", login.getBlogid());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('로그인 성공')");

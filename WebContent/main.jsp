@@ -7,6 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-asdasd
+	<%
+	String blogId = null;
+	if(session.getAttribute("blogId") != null){//로그인 세션 확인
+		blogId = (String) session.getAttribute("blogId");
+	%>
+		로그인 확인 메인
+	<% }else { //로그인 세션 없을때
+	%>
+		메인
+	<%}
+	%>
+	
 </body>
 </html>
