@@ -1,33 +1,23 @@
-
-<%@ page import="java.io.PrintWriter" %>
-<%@ page import="Board.BoardDAO" %>
-<%@ page import="Board.BoardVO" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% 
+	request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/bootstrap.css">
-<title>게시판 웹 사이트</title>
+<title>JSP 게시판 웹사이트</title>
 </head>
 <body>
-	<%
-	
-	/* 	// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
+<%-- 	<%
+		// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
 		String userID = null;
 		if(session.getAttribute("userID") != null){
 			userID = (String)session.getAttribute("userID");
-		} */
-		int pageNumber = 1;//기본은1페이지 전달
-		//만약 파라미터로 넘어온 오브젝트 타입'pageNumber'가 존대한다면
-		//'int' 타입으로 캐스팅을 해주고 그 값을 'pagaNumber'변수에 저장한다.
-			request.setCharacterEncoding("utf-8");
-		if(request.getParameter("pageNumber")!=null){
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 		}
-	%>
+	%> --%>
 
 	<nav class="navbar navbar-default"> <!-- 네비게이션 --> 
 		<div class="navbar-header"> <!-- 네비게이션 상단 부분 -->
@@ -89,47 +79,37 @@
 		</div>
 	</nav>
 	<!-- 네비게이션끝 -->
-	
-	<!-- 게시판 메인페이지 시작영역 -->
+
+<!--게시판 글쓰기 양식 영역시작-->
 	<div class="container">
-		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
-				<thead>
-					<tr>
-						<th style="background-color: #eeeeee; text-align: center;">번호</th>
-						<th style="background-color: #eeeeee; text-align: center;">제목</th>
-						<th style="background-color: #eeeeee; text-align: center;">작성자</th>
-						<th style="background-color: #eeeeee; text-align: center;">작성일</th>
-					</tr>
-				</thead>
-				<tbody>
-				<%
-					BoardDAO boardDAO = new BoardDAO();
-				ArrayList<BoardVO> list = boardDAO.getList(pageNumber);
-					for(int i=0; i<list.size(); i++){
-				%>
-						<tr>
-								
-								<td><%= list.get(i).getBoardID() %></td>
-								<!-- 게시글 제목을 누르면 해당글 볼수 있도록 링크를 걸어둔다 -->
-								<td><a href="view.jsp?boardID=<%=list.get(i).getBoardID()%>">
-										<%= list.get(i).getBoardTitle() %></a></td>
-								<td><%= list.get(i).getUserID() %></td>
-								<td><%= list.get(i).getBoardDate().substring(0,11)+list.get(i).getBoardDate().substring(11,13)+"시"
-								+ list.get(i).getBoardDate().substring(14,16)+"분"%></td>
-						</tr>
-						<%
-								}
-						%>
-				</tbody>
-			</table>
-			<!-- 글쓰기 버튼 생성 -->
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-		</div>
+			<div class="row">
+				<form method="get" action="writeAction.jsp">
+					<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+							<thead>
+								<tr>
+									<th colspan="2" style="background-color:#eeeeee;text-align:center;">
+										게시판 글쓰기 양식
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td>
+										<input type="text" class="form-control" placeholder="글 제목" name="boardTitle" maxlength="80">
+									</td>
+								</tr>
+								<tr>
+									<td><textarea class="form-control" placeholder="글 내용" name="boardContent" maxlength="4000" style="height:350px;'"></textarea></td>
+								</tr>
+							</tbody>
+					</table>
+						<!-- 글쓰기 버튼 생성 -->
+						<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+				</form>
+			</div>
 	</div>
-	<!-- 게시판 메인페이지 영역끝 -->
-	<!-- 부트스트랩 참조 영역 -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- 게시판 글쓰기 양식 영역끝 -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
 </html>
