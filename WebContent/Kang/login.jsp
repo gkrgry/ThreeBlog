@@ -20,6 +20,9 @@ function fn_sendLogin(){
 	   frmLogin.submit();
    } 
 }
+function fn_join(){
+
+}
 </script>
 </head>
 <body>
@@ -29,7 +32,7 @@ function fn_sendLogin(){
 			아이디 : <input type="text" name="blogid"><br>
 			비밀번호 : <input type="password" name="blogpw"><br>
 			<input type="button" value="로그인" onclick="fn_sendLogin()">
-			<input type="hidden" name="command" value="login">
+			<a href="join.jsp">회원가입</a>
 			</form>
 		</div>
 	</div>

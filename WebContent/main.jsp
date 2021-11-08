@@ -13,9 +13,12 @@
 		blogId = (String) session.getAttribute("blogId");
 	%>
 		로그인 확인 메인
+		<a href="./Kang/logoutAction.jsp">로그아웃</a>
 	<% }else { //로그인 세션 없을때
 	%>
 		메인
+		<a href="./Kang/login.jsp">로그인</a>
+		<a href="./Kang/join.jsp">회원가입</a>
 	<%}
 	%>
 	
