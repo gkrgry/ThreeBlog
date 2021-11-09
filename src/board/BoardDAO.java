@@ -49,7 +49,7 @@ public class BoardDAO {
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				return rs.getInt(1)+1;
+				return rs.getInt(1)+1; //게시판 bId 가장 높은 번호에 +1 을 해준다
 			}
 			return 1; //첫번째 게시판 일 경우
 			} catch (Exception e) {
@@ -112,6 +112,29 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	//하나의 게시글 보는 메소드
+	public BoardVO getVo(int bId) {
+		String sql = "select * from where bId = ?";
+		try {
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, bId);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				BoardVO vo = new BoardVO();
+				vo.setbId(rs.getInt(1));
+				vo.setbTitle(rs.getString(2));
+				vo.setLoginid(rs.getString(3));
+				vo.setbDate(rs.getString(4));
+				vo.setbContent(rs.getString(5));
+				vo.setbAvailable(rs.getInt(6));
+				return vo;
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
     
 }
