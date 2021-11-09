@@ -31,7 +31,6 @@ public class LoginDAO {
 			Class.forName(driver);
 			con = DriverManager.getConnection(loginURL, loginId, loginPw);
 			String sql = "select blogpw from bloglogin where blogid = ?";
-			System.out.println(sql);
 			pstmt = con.prepareStatement(sql); //sql 쿼리문을 대기 시킨
 			pstmt.setString(1, userId); // 첫번재 ? 에 userId 넣기
 			rs = pstmt.executeQuery(); //쿼리를 rs에 저장
