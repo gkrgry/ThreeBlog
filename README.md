@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CSHD project
 > 인원 => cute 재혁 / sexy 태규 / hansome 호준
  <hr>
@@ -21,3 +22,6 @@
  <hr>
 
  ## back - 태규 & 호준
+=======
+# ThreeBlog
+>>>>>>> refs/heads/Kang

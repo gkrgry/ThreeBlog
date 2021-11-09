@@ -19,15 +19,16 @@
 <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 </head>
 
-<body>
+<body
+>
 <div id="wrap">
   <header class="header">
     <div class="header_top">
-        <a href="Login.html">LOGIN</a>
-        <a href="./user/Sign.html">SIGN</a>
+        <a href="./user/Login.jsp">LOGIN</a>
+        <a href="./user/Sign.jsp">SIGN</a>
     </div>
     <div class="header_logo">
-        <a href="../Front/Mainpage.html">
+        <a href="Mainpage.jsp">
             <h1>CSHD</h1>
             <p>blog</p>
         </a>
