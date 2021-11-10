@@ -3,49 +3,49 @@ package Board;
 
 
 public class BoardVO {
-	private int boardID;
-	private String boardTitle;
-	private String userID;
-	private String boardDate;
-	private String boardContent;
-	private int boardAvailable;
+	private int bId;
+	private String bTitle;
+	private String loginid;
+	private String bDate;
+	private String bContent;
+	private int bAvailable;
+	public int getbId() {
+		return bId;
+	}
+	public void setbId(int bId) {
+		this.bId = bId;
+	}
+	public String getbTitle() {
+		return bTitle;
+	}
+	public void setbTitle(String bTitle) {
+		this.bTitle = bTitle;
+	}
+	public String getLoginid() {
+		return loginid;
+	}
+	public void setLoginid(String loginid) {
+		this.loginid = loginid;
+	}
+	public String getbDate() {
+		return bDate;
+	}
+	public void setbDate(String bDate) {
+		this.bDate = bDate;
+	}
+	public String getbContent() {
+		return bContent;
+	}
+	public void setbContent(String bContent) {
+		this.bContent = bContent;
+	}
+	public int getbAvailable() {
+		return bAvailable;
+	}
+	public void setbAvailable(int bAvailable) {
+		this.bAvailable = bAvailable;
+	}
 	
-	public int getBoardID() {
-		return boardID;
-	}
-	public void setBoardID(int boardID) {
-		this.boardID = boardID;
-	}
-	public String getBoardTitle() {
-		return boardTitle;
-	}
-	public void setBoardTitle(String boardTitle) {
-		this.boardTitle = boardTitle;
-	}
-	public String getUserID() {
-		return userID;
-	}
-	public void setUserID(String userID) {
-		this.userID = userID;
-	}
-	public String getBoardDate() {
-		return boardDate;
-	}
-	public void setBoardDate(String boardDate) {
-		this.boardDate = boardDate;
-	}
-	public String getBoardContent() {
-		return boardContent;
-	}
-	public void setBoardContent(String boardContent) {
-		this.boardContent = boardContent;
-	}
-	public int getBoardAvailable() {
-		return boardAvailable;
-	}
-	public void setBoardAvailable(int boardAvailable) {
-		this.boardAvailable = boardAvailable;
-	}
 	
 	
 }

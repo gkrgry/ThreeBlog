@@ -1,34 +1,45 @@
-
-<%@ page import="java.io.PrintWriter" %>
-<%@ page import="Board.BoardDAO" %>
-<%@ page import="Board.BoardVO" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-     <% request.setCharacterEncoding("utf-8");
+ <% request.setCharacterEncoding("utf-8");
      response.setContentType("text/html;charset=utf-8"); %>
+  <%@ page import="java.io.PrintWriter" %>
+  <%@ page import="Board.BoardVO" %>
+  <%@ page import="Board.BoardDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/bootstrap.css">
-<title>게시판 웹 사이트</title>
+<title>JSP 게시판 웹사이트</title>
 </head>
 <body>
-	<%
-	
-	/* 	// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
+<%-- 	<%
+		// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
 		String userID = null;
 		if(session.getAttribute("userID") != null){
 			userID = (String)session.getAttribute("userID");
-		} */
-		int pageNumber = 1;//기본은1페이지 전달
-		//만약 파라미터로 넘어온 오브젝트 타입'pageNumber'가 존대한다면
-		//'int' 타입으로 캐스팅을 해주고 그 값을 'pagaNumber'변수에 저장한다.
-			
-		if(request.getParameter("pageNumber")!=null){
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 		}
+	%> --%>
+	
+	<%	
+	//bId 를 초기화시키고
+	//bId라는 데이터가 넘어온 것이 존재하면 캐스팅하여 변수담기
+	int bId = 0;
+	if(request.getParameter("bId") !=  null){
+		bId=Integer.parseInt(request.getParameter("bId"));
+	}
+	
+	//만약 넘어온 데이터 없을경우
+	if(bId==0){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('유효하지 않은 글입니다.')");
+		script.println("location.href='board.jsp'");
+		script.println("</script>");
+	}
+	
+	// 유요한 글이라면 구체적인 정보를 bo라는 인스턴스에 담기
+	BoardVO bo = new BoardDAO().getBoardVO(bId);
 	%>
 
 	<nav class="navbar navbar-default"> <!-- 네비게이션 --> 
@@ -91,47 +102,61 @@
 		</div>
 	</nav>
 	<!-- 네비게이션끝 -->
-	
-	<!-- 게시판 메인페이지 시작영역 -->
+
+<!--게시판 글쓰기 양식 영역시작-->
 	<div class="container">
-		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
-				<thead>
-					<tr>
-						<th style="background-color: #eeeeee; text-align: center;">번호</th>
-						<th style="background-color: #eeeeee; text-align: center;">제목</th>
-						<th style="background-color: #eeeeee; text-align: center;">작성자</th>
-						<th style="background-color: #eeeeee; text-align: center;">작성일</th>
-					</tr>
-				</thead>
-				<tbody>
-				<%
-					BoardDAO boardDAO = new BoardDAO();
-				ArrayList<BoardVO> list = boardDAO.getList(pageNumber);
-					for(int i=0; i<list.size(); i++){
-				%>
-						<tr>
-								
-								<td><%= list.get(i).getbId() %></td>
-								<!-- 게시글 제목을 누르면 해당글 볼수 있도록 링크를 걸어둔다 -->
-								<td><a href="view.jsp?bId=<%=list.get(i).getbId()%>">
-										<%= list.get(i).getbTitle() %></a></td>
-								<td><%= list.get(i).getLoginid() %></td>
-								<td><%= list.get(i).getbDate().substring(0,11)+list.get(i).getbDate().substring(11,13)+"시"
-								+ list.get(i).getbDate().substring(14,16)+"분"%></td>
-						</tr>
-						<%
-								}
-						%>
-				</tbody>
-			</table>
-			<!-- 글쓰기 버튼 생성 -->
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-		</div>
+			<div class="row">
+			
+					<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+							<thead>
+								<tr>
+									<th colspan="2" style="background-color:#eeeeee;text-align:center;">
+										게시판 글 보기
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr> 
+									<td style="width: 20%;">
+										글 제목
+									</td>
+									<td colspan="2">
+										<%= bo.getbTitle().replaceAll("","&nbsp;").replaceAll("<","&lt").replaceAll(">", "&gt").replaceAll("\n","<br>") %>
+									</td>
+								</tr>
+								<tr>
+									<td>작성자</td>
+									<td colspan="2">
+										<%= bo.getbDate().substring(0,11)+bo.getbDate().substring(11,13)+"시"
+										+ bo.getbDate().substring(14,16)+"분" %>
+									</td>
+								</tr>
+								<tr>
+									<td>내용</td>
+									<td colspan="2" style="height: 200px; text-align:left">
+										<%=bo.getbContent().replaceAll("","&nbsp;").replaceAll("<","&lt").replaceAll(">", "&gt").replaceAll("\n","<br>") %>
+									</td>
+								</tr>
+							</tbody>
+					</table>
+					<a href="board.jsp" class="btn btn-primary">목록</a>
+					<!-- 해당 글의 작성자가 본인이라면 수정과 삭제가 가능하도록 코드추가 -->
+				<%-- 	<%
+						if(userID != null && userID.equals(bo.getLoginid())){
+						
+					%> --%>
+					
+						<a href="update.jsp?bId=<%= bId %>" class="btn btn-primary">수정</a>
+						<a href="deleteAction.jsp?bId=<%= bId %>" class="btn btn-primary">삭제</a>
+						
+					
+					<%-- <%
+					} 
+					%> --%>
+			</div>
 	</div>
-	<!-- 게시판 메인페이지 영역끝 -->
-	<!-- 부트스트랩 참조 영역 -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- 게시판 글쓰기 양식 영역끝 -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
 </html>

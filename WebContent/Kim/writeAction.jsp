@@ -4,8 +4,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <jsp:useBean id="Board" class="Board.BoardVO" scope="page"/>
-    <jsp:setProperty name="Board" property="boardTitle"/>
-    <jsp:setProperty name="Board" property="boardContent"/>
+    <jsp:setProperty name="Board" property="bTitle"/>
+    <jsp:setProperty name="Board" property="bContent"/>
+  <% request.setCharacterEncoding("utf-8");
+     response.setContentType("text/html;charset=utf-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +31,7 @@
 			}else{ */
 				
 				// 입력이 안 된 부분이 있는지 체크한다
-				if(Board.getBoardTitle() == null || Board.getBoardContent() == null){
+				if(Board.getbTitle() == null || Board.getbContent() == null){
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
 					script.println("alert('입력이 안 된 사항이 있습니다')");
@@ -39,7 +41,7 @@
 					// 정상적으로 입력이 되었다면 글쓰기 로직을 수행한다
 					BoardDAO boardDAO = new BoardDAO();
 				
-					int result = boardDAO.write(Board.getBoardTitle(), "김호준", Board.getBoardContent());
+					int result = boardDAO.write(Board.getbTitle(), "김호준", Board.getbContent());
 					// 데이터베이스 오류인 경우
 					if(result == -1){
 						PrintWriter script = response.getWriter();
