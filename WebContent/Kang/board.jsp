@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="board.BoardDAO" %>
-<%@ page import="board.BoardVO" %>
+<%@ page import="board_t.BoardDAO" %>
+<%@ page import="board_t.BoardVO" %>
 <%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
