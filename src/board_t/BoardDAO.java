@@ -1,4 +1,4 @@
-package board;
+package board_t;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

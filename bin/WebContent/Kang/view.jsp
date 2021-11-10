@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="board_t.BoardVO" %>
-<%@ page import="board_t.BoardDAO" %>
+<%@ page import="board.BoardVO" %>
+<%@ page import="board.BoardDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
