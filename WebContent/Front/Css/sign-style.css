@@ -75,7 +75,7 @@ h3{
     padding: 10px 0px;
     background: #fff;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .int {
@@ -88,6 +88,16 @@ h3{
     font-size: 15px;
     font-family: 'NotoSansKR';
 }
+.pswdimg{
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
 
 input {
     font-family: 'NotoSansKR';
@@ -96,6 +106,26 @@ input {
 .sumit{
     margin: 30px 0 91px;
 }
+
+/*error*/
+
+.error_next_box{
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+#alerTxt{
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+/*button*/
 
 #btnsign{
     width: 30%;
@@ -108,7 +138,7 @@ input {
 
 }
 
-#btnsign span{
+#btnsign a{
     color: white;
     font-size: 20px;
     font-weight: 400;

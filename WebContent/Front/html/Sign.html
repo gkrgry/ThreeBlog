@@ -29,15 +29,18 @@
                 <span class="name box">
                     <input type="text" name="id" id="id" class="int" maxlength="20"placeholder="ID">
                 </span>
-                
+                <span class="error_next_box"></span>
             </div>
 
             <!-- password -->
             <div>
                 <h3 class="title"><label for="password">비밀번호</label></h3>
                 <span class="password box">
-                    <input type="text" name="password" id="password" class="int" maxlength="20"placeholder="영문과 숫자가 들어가야합니다.">
+                    <input type="password" name="password" id="password" class="int" maxlength="20"placeholder="영문과 숫자가 들어가야합니다.">
+                    <span id="alerTxt">사용불가</span>
+                    <img src="../Img/lock-solid.svg" id="pswd_img" class="pswdimg" alt="">
                 </span>
+                <span class="error_next_box"></span>
             </div>
 
             <!-- password_check -->
@@ -45,7 +48,9 @@
                 <h3 class="title"><label for="check">비밀번호 확인</label></h3>
                 <span class="check box">
                     <input type="password" name="password_check" id="check" class="int" maxlength="20"placeholder="비밀번호와 같아야합니다.">
+                    <img src="../Img/user-lock-solid.svg" id="check_img" class="pswdimg" alt="">
                 </span>
+                <span class="error_next_box"></span>
             </div>
 
             <!-- name -->
@@ -54,6 +59,7 @@
                 <span class="name box">
                     <input type="text" name="name" id="name" class="int" maxlength="20" placeholder="임재혁">  
                 </span>
+                <span class="error_next_box"></span>
             </div>
 
             <!-- email -->
@@ -62,6 +68,7 @@
                 <span class="email box">
                     <input type="text" name="email" id="email" class="int" placeholder="####@naver.com">
                 </span>   
+                <span class="error_next_box">이메일 주소를 다시 확인해주세요</span>
             </div>
 
            <!-- button -->
@@ -77,6 +84,7 @@
     </section>
 </div>
 </div>
-    
+    <!-- wrapper -->
+    <script src="../js/sign.js"></script>
 </body>
 </html>
