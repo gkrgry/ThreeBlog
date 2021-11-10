@@ -44,7 +44,7 @@
 .jd-slider.main-slider .slide-area > li{width:100%;}
 .jd-slider.main-slider .slide-area > li > a{height:500px;margin:0;border-radius:0;box-shadow:none}
 .jd-slider.main-slider .slide-area > li > a:hover{box-shadow:none}
-.jd-slider.main-slider .slide-area > li > a img{height:auto;border-radius:0;transform: translateY(-20%);}
+.jd-slider.main-slider .slide-area > li > a img{height:auto;border-radius:0;}
 
 .jd-slider.main-slider .next, .jd-slider.main-slider .prev{color:rgba(255, 255, 255, .4);padding: 20px;}
 .jd-slider.main-slider .next:hover, .jd-slider.main-slider .prev:hover
