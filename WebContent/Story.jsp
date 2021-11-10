@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,28 +28,28 @@
     </header>
     <div class="tit">
         <h2>STORE</h2>
-        <button> <a href="#">글쓰기</a></button>
+        <button> <a href="#">ê¸ì°ê¸°</a></button>
     </div>
 
     <section class="cont">
         <div class="part">
             <div class="box">
                 <div>image</div>
-                <p>슈슈슈규슈규슈귯ㄱ/....숙수규슉슈규슉슈ㅠ슛규ㅠ귝슈규</p>
+                <p>ìììê·ìê·ìê·¯ã±/....ììê·ììê·ììã ìê·ã ê·ìê·</p>
             </div>
             <div class="box">
                 <div>image</div>
-                <p>슈슈슈규슈규슈귯ㄱ/....숙수규슉슈규슉슈ㅠ슛규ㅠ귝슈규</p>
+                <p>ìììê·ìê·ìê·¯ã±/....ììê·ììê·ììã ìê·ã ê·ìê·</p>
             </div>
         </div>
         <div class="part">
             <div class="box">
                 <div>image</div>
-                <p>슈슈슈규슈규슈귯ㄱ/....숙수규슉슈규슉슈ㅠ슛규ㅠ귝슈규</p>
+                <p>ìììê·ìê·ìê·¯ã±/....ììê·ììê·ììã ìê·ã ê·ìê·</p>
             </div>
             <div class="box">
                 <div>image</div>
-                <p>슈슈슈규슈규슈귯ㄱ/....숙수규슉슈규슉슈ㅠ슛규ㅠ귝슈규</p>
+                <p>ìììê·ìê·ìê·¯ã±/....ììê·ììê·ììã ìê·ã ê·ìê·</p>
             </div>
         </div>
     </section>

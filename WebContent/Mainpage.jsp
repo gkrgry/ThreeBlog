@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
 <head>
@@ -19,8 +21,7 @@
 <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 </head>
 
-<body
->
+<body>
 <div id="wrap">
   <header class="header">
     <div class="header_top">
