@@ -49,6 +49,7 @@
 .jd-slider.main-slider .next, .jd-slider.main-slider .prev{color:rgba(255, 255, 255, .4);padding: 20px;}
 .jd-slider.main-slider .next:hover, .jd-slider.main-slider .prev:hover
 {color:rgba(255, 255, 255, 1);background-color: rgba(0, 0, 0, .3);}
+.jd-slider.main-slider .next i:hover, .jd-slider.main-slider .prev i:hover{color: white;}
 
 .jd-slider.main-slider .controller{position: absolute;bottom: 20px;}
 .jd-slider .controller .auto.pause .fa-pause, .jd-slider .controller .auto.play .fa-play{color:#fff}
